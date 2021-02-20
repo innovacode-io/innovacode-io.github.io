@@ -1,0 +1,163 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-TileColor" content="#009999" />
+    <meta name="theme-color" content="#009999" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta
+      name="apple-mobile-web-app-title"
+      content="InnovaCode | Software Studio"
+    />
+    <meta
+      name="description"
+      content="InnovaCode | Software Studio"
+    />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <link rel="canonical" href="https://innovacode.io" />
+    <title>
+      InnovaCode | Software Studio
+    </title>
+    <link rel="stylesheet" lazyload="1" async href="/assets/css/index.css" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link
+      async
+      lazyload="1"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div>
+      <div class="switch-toggle">
+        <input type="checkbox" id="switch-checkbox" />
+        <label for="switch" id="theme-switch"
+          >Enable/disable Dark Mode Theme</label
+        >
+      </div>
+
+      <h1>InnovaCode</h1>
+
+      <br />
+      <h2>Software Studio<br />Recife, Brazil</h2>
+      <br /><br />
+
+      <br />
+      <h2>Contact Me</h2>
+      <dl>
+        <dt>Github</dt>
+        <dd>
+          <a href="https://github.com/innovacode-io"
+            >github.com/innovacode-io</a
+          >
+        </dd>
+      </dl>
+    </div>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "headline": "InnovaCode | Software Studio",
+        "name": "InnovaCode",
+        "url": "https://innovacode.io"
+      }
+    </script>
+    <script>
+      /** Adding Google Analytics */
+      window.ga = function () {
+        ga.q.push(arguments);
+      };
+      ga.q = [];
+      ga.l = +new Date();
+      ga("create", "UA-58169656-1", "auto");
+      ga("send", "pageview");
+
+      function toggleSiteTheme(e, isLightModeLocalStorage) {
+        var html = document.getElementsByTagName("html");
+        var className = html[0].classList.value;
+
+        /** Gets the target by checking if it was triggered by clicking on the switch or if via OS configuration changes */
+        var target =
+          e && e.target ? e.target : document.getElementById("theme-switch");
+
+        var isLightMode =
+          typeof isLightModeLocalStorage === "string"
+            ? isLightModeLocalStorage === "true"
+            : target.className === "" || className === "light-mode";
+
+        html[0].className = isLightMode ? "dark-mode" : "light-mode";
+
+        target.className = isLightMode ? "active" : "";
+
+        /** Adding the current value into localStorage */
+        localStorage.setItem("website-is-dark-mode", isLightMode);
+
+        document.getElementById("switch-checkbox").checked = isLightMode
+          ? true
+          : false;
+      }
+
+      isMatchMediaSupported = typeof window.matchMedia === "function";
+      if (isMatchMediaSupported) {
+        var isLightModeFromLocalStorage = localStorage.getItem(
+          "website-is-dark-mode"
+        );
+        var darkModeMatches = window.matchMedia("(prefers-color-scheme: dark)");
+
+        /** Adds a listener for dark mode changes in OS */
+        darkModeMatches.addListener(function (e) {
+          toggleSiteTheme(
+            {},
+            (e && e.matches && e.matches.toString()) || undefined
+          );
+        });
+
+        /** Checks if the browser already have any theme information */
+        if (isLightModeFromLocalStorage) {
+          toggleSiteTheme({}, isLightModeFromLocalStorage);
+        } else if (darkModeMatches.matches) {
+          /** Checks if dark mode is enabled via OS on page load */
+          toggleSiteTheme();
+        }
+      }
+
+      /** Checks if it's a mobile device or not */
+      var isMobileDevice =
+        typeof window.orientation !== "undefined" ||
+        navigator.userAgent.indexOf("IEMobile") !== -1;
+
+      document.getElementById("theme-switch").addEventListener(
+        /** Using touchstart if is a mobile device. Otherwise, it will trigger based on the click */
+        isMobileDevice ? "touchstart" : "click",
+        toggleSiteTheme
+      );
+    </script>
+    <script
+      src="https://www.google-analytics.com/analytics.js"
+      async
+      defer
+    ></script>
+  </body>
+</html>
