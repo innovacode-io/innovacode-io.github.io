@@ -1,4 +1,4 @@
-User-Agent: *
-Disallow: 
+User-agent: *
+Disallow: /google07822d7b5554a80a.html
 
 Sitemap: https://innovacode.io/sitemap.xml
