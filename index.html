@@ -86,13 +86,13 @@ layout: default
     </script>
     <script>
       /** Adding Google Analytics */
-      window.ga = function () {
-        ga.q.push(arguments);
-      };
-      ga.q = [];
-      ga.l = +new Date();
-      ga("create", "G-6PC38EYZKP", "auto");
-      ga("send", "pageview");
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-6PC38EYZKP');
 
       function toggleSiteTheme(e, isLightModeLocalStorage) {
         var html = document.getElementsByTagName("html");
