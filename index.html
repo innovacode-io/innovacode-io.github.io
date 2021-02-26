@@ -39,6 +39,7 @@ layout: default
       InnovaCode | Software Studio
     </title>
     <link rel="stylesheet" lazyload="1" async href="/assets/css/index.css" />
+    <link rel="shortcut icon" href="/assets/images/favicon.ico"/>
     <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link
@@ -51,29 +52,54 @@ layout: default
 
   <body>
     <div>
-      <div class="switch-toggle">
-        <input type="checkbox" id="switch-checkbox" />
-        <label for="switch" id="theme-switch"
-          >Enable/disable Dark Mode Theme</label
-        >
-      </div>
+      <header>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 1000">
+          <defs/>
+          <defs>
+            <image width="213" height="29" id="img1" href="data:image/png;base64,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"/>
+          </defs>
+          <g id="logo-innovacode">
+            <path id="Innov" fill="#000" d="M448.82 370.86V638h-10.45V370.86h10.45zm81.32 83.6l1.14 32.49q13.11-18.05 31.16-28.69 18.24-10.64 39.71-10.64 15.58 0 27.17 4.94 11.78 4.75 19.38 13.87 7.79 8.93 11.59 22.04 3.99 13.11 3.99 29.64V638h-10.07V518.11q0-14.63-3.23-26.22-3.23-11.59-10.07-19.57-6.65-8.17-16.72-12.35-10.07-4.37-23.75-4.37-20.52 0-38 10.83-17.29 10.64-30.78 29.64V638h-10.07V450.66h4.75q3.61 0 3.8 3.8zm207.48 0l1.14 32.49q13.11-18.05 31.16-28.69 18.24-10.64 39.71-10.64 15.58 0 27.17 4.94 11.78 4.75 19.38 13.87 7.79 8.93 11.59 22.04 3.99 13.11 3.99 29.64V638h-10.07V518.11q0-14.63-3.23-26.22-3.23-11.59-10.07-19.57-6.65-8.17-16.72-12.35-10.07-4.37-23.75-4.37-20.52 0-38 10.83-17.29 10.64-30.78 29.64V638h-10.07V450.66h4.75q3.61 0 3.8 3.8zm270.56-6.84q19.95 0 35.34 7.03 15.58 6.84 26.22 19.57 10.64 12.54 16.15 30.4 5.51 17.86 5.51 39.71t-5.51 39.71q-5.51 17.67-16.15 30.21-10.64 12.54-26.22 19.38-15.39 6.65-35.34 6.65-19.95 0-35.53-6.65-15.39-6.84-26.03-19.38t-16.15-30.21q-5.51-17.86-5.51-39.71t5.51-39.71q5.51-17.86 16.15-30.4 10.64-12.73 26.03-19.57 15.58-7.03 35.53-7.03zm0 184.68q18.24 0 31.92-6.27 13.68-6.27 22.8-17.86 9.31-11.59 13.87-27.74 4.56-16.15 4.56-36.1 0-19.95-4.56-36.29t-13.87-27.93q-9.12-11.78-22.8-18.05-13.68-6.46-31.92-6.46-18.24 0-31.92 6.46-13.68 6.27-22.99 18.05-9.12 11.59-13.68 27.93-4.56 16.34-4.56 36.29t4.56 36.1q4.56 16.15 13.68 27.74 9.31 11.59 22.99 17.86 13.68 6.27 31.92 6.27zm272.65-181.64h7.03L1207.3 638h-8.36l-80.56-187.34h7.41q1.9 0 3.04 1.14 1.14 1.14 1.52 2.28l69.54 162.07q1.14 2.66 1.9 5.51.76 2.66 1.33 5.32l1.52-5.32q.76-2.85 1.9-5.51l69.54-162.07q.76-1.52 1.9-2.47 1.14-.95 2.85-.95z"/>
+            <path id="Code/" fill="#000" d="M1842.88 598.29q.76 0 2.09.95l3.99 4.18q-8.36 8.36-18.05 15.39-9.69 6.84-21.28 11.78-11.59 4.94-25.46 7.79-13.68 2.66-30.21 2.66-27.17 0-50.16-9.5-22.8-9.69-39.33-27.36-16.53-17.86-25.84-43.13-9.31-25.27-9.31-56.62 0-30.59 9.31-55.67 9.31-25.27 26.22-43.13 17.1-18.05 40.66-27.93 23.75-9.88 52.25-9.88 26.79 0 47.5 8.17t38.57 23.56l-2.85 4.18q-.76 1.33-3.04 1.33-1.14 0-3.99-2.09-2.66-2.09-7.22-5.13-4.37-3.23-10.83-6.84-6.27-3.8-14.82-6.84-8.55-3.23-19.38-5.32-10.83-2.09-23.94-2.09-25.84 0-47.5 8.93t-37.24 25.46q-15.58 16.53-24.32 40.28-8.55 23.56-8.55 53.01 0 30.02 8.55 53.77 8.74 23.56 24.13 40.09 15.39 16.34 36.29 25.08 20.9 8.74 45.41 8.74 15.39 0 27.55-2.09t22.23-6.27q10.26-4.18 18.81-10.26 8.74-6.08 17.29-13.87 1.33-1.33 2.47-1.33zm122.17-150.67q19.95 0 35.34 7.03 15.58 6.84 26.22 19.57 10.64 12.54 16.15 30.4 5.51 17.86 5.51 39.71t-5.51 39.71q-5.51 17.67-16.15 30.21-10.64 12.54-26.22 19.38-15.39 6.65-35.34 6.65-19.95 0-35.53-6.65-15.39-6.84-26.03-19.38t-16.15-30.21q-5.51-17.86-5.51-39.71t5.51-39.71q5.51-17.86 16.15-30.4 10.64-12.73 26.03-19.57 15.58-7.03 35.53-7.03zm0 184.68q18.24 0 31.92-6.27 13.68-6.27 22.8-17.86 9.31-11.59 13.87-27.74 4.56-16.15 4.56-36.1 0-19.95-4.56-36.29t-13.87-27.93q-9.12-11.78-22.8-18.05-13.68-6.46-31.92-6.46-18.24 0-31.92 6.46-13.68 6.27-22.99 18.05-9.12 11.59-13.68 27.93-4.56 16.34-4.56 36.29t4.56 36.1q4.56 16.15 13.68 27.74 9.31 11.59 22.99 17.86 13.68 6.27 31.92 6.27zm269.42-40.85V488.47q-11.78-18.05-26.03-25.46-14.25-7.6-32.68-7.6t-32.11 6.84q-13.68 6.65-22.8 18.62-9.12 11.97-13.68 28.31-4.56 16.34-4.56 35.53 0 44.65 16.72 66.12 16.91 21.47 49.21 21.47 19.76 0 36.48-10.83 16.91-10.83 29.45-30.02zm0-228.19h10.07V638h-4.56q-3.8 0-3.99-3.8l-1.14-33.44q-12.54 18.43-30.02 29.07-17.29 10.45-38.38 10.45-35.72 0-54.91-23.56-19.19-23.56-19.19-72.01 0-20.52 5.13-38.19 5.32-17.67 15.58-30.78 10.45-13.11 25.65-20.52 15.39-7.6 35.53-7.6t34.77 7.79q14.82 7.6 25.46 22.99V363.26zm76 163.02h135.66q0-16.91-4.94-30.02-4.75-13.3-13.3-22.42-8.36-9.12-19.95-13.87t-25.08-4.75q-15.96 0-28.69 5.13-12.54 4.94-21.66 14.25-9.12 9.31-14.82 22.42-5.51 13.11-7.22 29.26zm137.37 85.88l2.47 2.85q-3.8 4.75-10.64 9.31-6.84 4.56-15.77 8.17-8.74 3.42-19.19 5.7-10.26 2.09-21.09 2.09-19.19 0-34.77-6.65-15.39-6.84-26.41-19.57-10.83-12.73-16.72-31.16-5.89-18.62-5.89-42.37 0-20.52 5.51-37.43 5.7-17.1 16.34-29.45 10.64-12.35 26.03-19.19 15.39-6.84 34.96-6.84 15.2 0 28.31 5.32 13.3 5.32 23.18 15.77 9.88 10.26 15.39 25.46 5.7 15.2 5.7 34.77 0 3.99-3.42 3.99H2309.9q-.19 1.9-.19 3.8v3.8q0 22.42 5.32 39.52t15.01 28.69q9.69 11.59 23.37 17.67 13.87 5.89 30.78 5.89 15.01 0 26.03-3.23 11.02-3.42 18.43-7.41t11.4-7.22q4.18-3.42 5.32-3.42 1.52 0 2.47 1.14zm173.28-248.9l-120.08 285.76q-.95 2.28-2.85 3.23-1.9.95-3.99.95h-3.8l120.08-285.76q2.09-4.18 6.46-4.18h4.18z"/>
+            <path id="&lt;" fill="#000" d="M356.4 687.4L245.2 492.2l110.4-188.8h-43.2L206 481.8v20.8l106.4 184.8z"/>
+            <path id="&gt;" fill="#000" d="M2678.4 687.4l106.4-184.8v-20.8l-106.4-178.4h-43.2l110.4 188.8-111.2 195.2z"/>
+            <g id="thin-triangle">
+              <path id="v" fill="#000" d="M1331.02 654h-4.2l127.8-294h5.4l127.8 294h-4.2q-2.4 0-3.6-1.5-1.2-1.2-1.8-2.7l-117-269.4q-1.5-2.7-2.4-5.7-.9-2.7-1.5-5.4-.6 2.7-1.5 5.4-.9 3-2.4 5.7l-117 269.4q-2.1 4.2-5.4 4.2z"/>
+              <use id="v copy" href="#img1" x="1378" y="627"/>
+            </g>
+          </g>
+        </svg>
+        <div class="pulse"></div>
+        <h1 class="screen-readers-only">InnovaCode</h1>
 
-      <h1>InnovaCode</h1>
+        <h2>Software Studio<br />Recife, Brazil</h2>
+      </header>
+      <main>
+        <h2>Contact Us</h2>
+        <dl>
+          <dt class="space">Email</dt>
+          <dd>
+            <a href="mailto:hello@innovacode.io">
+              hello@innovacode.io
+            </a>
+          </dd>
+          <dt>Github</dt>
+          <dd>
+            <a href="https://github.com/innovacode-io"
+              >github.com/innovacode-io</a
+            >
+          </dd>
+          <dt>Twitter</dt>
+          <dd>
+            <a href="https://twitter.com/innovacode_io"
+              >@innovacode_io</a
+            >
+          </dd>
+        </dl>
+      </main>
+      <footer>
 
-      <br />
-      <h2>Software Studio<br />Recife, Brazil</h2>
-      <br /><br />
-
-      <br />
-      <h2>Contact Me</h2>
-      <dl>
-        <dt>Github</dt>
-        <dd>
-          <a href="https://github.com/innovacode-io"
-            >github.com/innovacode-io</a
-          >
-        </dd>
-      </dl>
+      </footer>
     </div>
     <script type="application/ld+json">
       {
@@ -93,66 +119,6 @@ layout: default
       gtag('js', new Date());
 
       gtag('config', 'G-6PC38EYZKP');
-
-      function toggleSiteTheme(e, isLightModeLocalStorage) {
-        var html = document.getElementsByTagName("html");
-        var className = html[0].classList.value;
-
-        /** Gets the target by checking if it was triggered by clicking on the switch or if via OS configuration changes */
-        var target =
-          e && e.target ? e.target : document.getElementById("theme-switch");
-
-        var isLightMode =
-          typeof isLightModeLocalStorage === "string"
-            ? isLightModeLocalStorage === "true"
-            : target.className === "" || className === "light-mode";
-
-        html[0].className = isLightMode ? "dark-mode" : "light-mode";
-
-        target.className = isLightMode ? "active" : "";
-
-        /** Adding the current value into localStorage */
-        localStorage.setItem("website-is-dark-mode", isLightMode);
-
-        document.getElementById("switch-checkbox").checked = isLightMode
-          ? true
-          : false;
-      }
-
-      isMatchMediaSupported = typeof window.matchMedia === "function";
-      if (isMatchMediaSupported) {
-        var isLightModeFromLocalStorage = localStorage.getItem(
-          "website-is-dark-mode"
-        );
-        var darkModeMatches = window.matchMedia("(prefers-color-scheme: dark)");
-
-        /** Adds a listener for dark mode changes in OS */
-        darkModeMatches.addListener(function (e) {
-          toggleSiteTheme(
-            {},
-            (e && e.matches && e.matches.toString()) || undefined
-          );
-        });
-
-        /** Checks if the browser already have any theme information */
-        if (isLightModeFromLocalStorage) {
-          toggleSiteTheme({}, isLightModeFromLocalStorage);
-        } else if (darkModeMatches.matches) {
-          /** Checks if dark mode is enabled via OS on page load */
-          toggleSiteTheme();
-        }
-      }
-
-      /** Checks if it's a mobile device or not */
-      var isMobileDevice =
-        typeof window.orientation !== "undefined" ||
-        navigator.userAgent.indexOf("IEMobile") !== -1;
-
-      document.getElementById("theme-switch").addEventListener(
-        /** Using touchstart if is a mobile device. Otherwise, it will trigger based on the click */
-        isMobileDevice ? "touchstart" : "click",
-        toggleSiteTheme
-      );
     </script>
     <script
       src="https://www.googletagmanager.com/gtag/js?id=G-6PC38EYZKP"
