@@ -20,10 +20,7 @@ body {
   background: #fff;
   color: #666;
   font-size: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100%;
+  display: block;
 }
 
 body > div {
@@ -31,6 +28,9 @@ body > div {
   min-width: 300px;
   margin: 0 auto;
   padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
 }
 
 img {
